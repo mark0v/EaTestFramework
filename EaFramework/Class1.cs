@@ -1,4 +1,4 @@
-﻿namespace EaFramework
+﻿ namespace EaFramework
 {
     public class Class1
     {
