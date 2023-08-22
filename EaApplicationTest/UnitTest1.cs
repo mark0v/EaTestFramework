@@ -1,3 +1,4 @@
+using EaApplicationTest.Pages;
 using EaFramework.Config;
 using EaFramework.Driver;
 using OpenQA.Selenium;
@@ -26,8 +27,20 @@ namespace EaApplicationTest
         [Fact]
         public void Test1()
         {
-            _drivingFixture.Driver.FindElement(By.LinkText("Product")).Click();
-            _drivingFixture.Driver.FindElement(By.LinkText("Create")).Click();
+            //HomePage
+            var homePage = new HomePage(_drivingFixture);
+            var productPage = new ProductPage(_drivingFixture);
+
+            //Click the create link
+            homePage.ClickProduct();
+
+            //Create product
+            //productPage.ClickCreateButton();
+            //productPage.CreateProduct("FirstProduct2", "22Description of product", "1200", "MONITOR");
+
+            productPage.PerformClickOnSpecialValue("Mouse", "Edit");
+            ;
+
         }
 
         public void Dispose()
