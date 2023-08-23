@@ -12,44 +12,36 @@ namespace EaApplicationTest
     public class UnitTest1 : IDisposable
     {
         
-        public IDriverFixture _drivingFixture;
+        private readonly IDriverFixture _driverFixture;
+        private readonly IHomePage _homePage;
+        private readonly IProductPage _productPage;
 
-        public UnitTest1() 
+        public UnitTest1(IDriverFixture driverFixture, IHomePage homePage, IProductPage productPage) 
         {
-            //var testSettings = new TestSettings()
-            //{
-            //    BrowserType = BrowserType.Chrome,
-            //    ApplicationUrl = new Uri("http://localhost:8000/"),
-            //    TimeoutInterval = 30
-            //};
-
-            var testsettings = 
-
-            _drivingFixture = new DriverFixture(testSettings);
+            _driverFixture = driverFixture;                   
+            _homePage = homePage;
+            _productPage = productPage;
         }
         
         [Theory]
         [AutoData]
         public void Test2(Product product)
         {
-            //HomePage
-            var homePage = new HomePage(_drivingFixture);
-            var productPage = new ProductPage(_drivingFixture);
-
             //Click the create link
-            homePage.ClickProduct();
+            _homePage.ClickProduct();
 
             //Create product
-            productPage.ClickCreateButton();
-            productPage.CreateProduct(product);
+            _productPage.ClickCreateButton();
+            _productPage.CreateProduct(product);
 
-            productPage.PerformClickOnSpecialValue(product.Name, "Edit");
+            _productPage.PerformClickOnSpecialValue(product.Name, "Details");
+            Thread.Sleep(3000);
 
         }
 
         public void Dispose()
         {
-            _drivingFixture.Driver.Quit();
+            _driverFixture.Driver.Quit();
         }
     }
 }

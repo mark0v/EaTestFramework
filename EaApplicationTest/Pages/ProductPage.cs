@@ -5,24 +5,34 @@ using OpenQA.Selenium;
 
 namespace EaApplicationTest.Pages
 {
-    public class ProductPage
-    {
-        private readonly IDriverFixture _driverFixture;
 
-        public ProductPage(IDriverFixture driverFixture)
+    public interface IProductPage
+    {
+        public void ClickCreateButton();
+
+        public void PerformClickOnSpecialValue(string name, string operation);
+        
+        public void CreateProduct(Product product);
+    }
+
+    public class ProductPage : IProductPage
+    {
+        private readonly IDriverWait _driver;
+
+        public ProductPage(IDriverWait driver)
         {
-            _driverFixture = driverFixture;
+            _driver = driver;
         }
 
-        private IWebElement txtName => _driverFixture.Driver.FindElement(By.Id("Name"));
-        private IWebElement txtDescription => _driverFixture.Driver.FindElement(By.Id("Description"));
-        private IWebElement txtPrice => _driverFixture.Driver.FindElement(By.Id("Price"));
-        private IWebElement ddlProductType => _driverFixture.Driver.FindElement(By.Id("ProductType"));
-        private IWebElement lnkCreate => _driverFixture.Driver.FindElement(By.LinkText("Create"));
+        private IWebElement txtName => _driver.FindElement(By.Id("Name"));
+        private IWebElement txtDescription => _driver.FindElement(By.Id("Description"));
+        private IWebElement txtPrice => _driver.FindElement(By.Id("Price"));
+        private IWebElement ddlProductType => _driver.FindElement(By.Id("ProductType"));
+        private IWebElement lnkCreate => _driver.FindElement(By.LinkText("Create"));
 
-        private IWebElement tbList => _driverFixture.Driver.FindElement(By.CssSelector(".table"));
+        private IWebElement tbList => _driver.FindElement(By.CssSelector(".table"));
 
-        private IWebElement btnCreate => _driverFixture.Driver.FindElement(By.Id("Create"));
+        private IWebElement btnCreate => _driver.FindElement(By.Id("Create"));
 
         public void ClickCreateButton() => lnkCreate.Click();
 

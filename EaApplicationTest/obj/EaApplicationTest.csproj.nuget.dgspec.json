@@ -132,6 +132,10 @@
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.11.0, )"
+            },
+            "Xunit.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.8.1, )"
             }
           },
           "imports": [
