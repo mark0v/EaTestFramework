@@ -7,10 +7,14 @@ C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\xu
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\selenium-manager\linux\selenium-manager
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\selenium-manager\macos\selenium-manager
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\appsettings.json
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\EaApplicationTest.deps.json
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\EaApplicationTest.runtimeconfig.json
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\EaApplicationTest.dll
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\EaApplicationTest.pdb
+C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\AutoFixture.dll
+C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\AutoFixture.Xunit2.dll
+C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\Fare.dll
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\nuc\source\repos\EaTestAutomation\EaApplicationTest\bin\Debug\net7.0\Microsoft.TestPlatform.PlatformAbstractions.dll

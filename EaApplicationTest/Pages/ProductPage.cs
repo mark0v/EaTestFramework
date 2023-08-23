@@ -1,4 +1,5 @@
-﻿using EaFramework.Driver;
+﻿using EaApplicationTest.Models;
+using EaFramework.Driver;
 using EaFramework.Extensions;
 using OpenQA.Selenium;
 
@@ -25,12 +26,12 @@ namespace EaApplicationTest.Pages
 
         public void ClickCreateButton() => lnkCreate.Click();
 
-        public void CreateProduct(string name, string description, string price, string productType)
+        public void CreateProduct(Product product)
         {
-            txtName.SendKeys(name);
-            txtDescription.SendKeys(description);
-            txtPrice.SendKeys(price);
-            ddlProductType.SelectDropdownByText(productType);
+            txtName.SendKeys(product.Name);
+            txtDescription.SendKeys(product.Description);
+            txtPrice.SendKeys(product.Price.ToString());
+            ddlProductType.SelectDropdownByText(product.ProductType.ToString());
             btnCreate.Click();
         }
 
